@@ -4,16 +4,20 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <v-app>
-    <v-system-bar>
-      <v-spacer></v-spacer>
-    </v-system-bar>
     <v-app-bar app>
-      <header>
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </header>
+      <v-container class="header">
+        <v-row class="justify-space-between w-100">
+          <v-col class="d-flex">
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col class="d-flex justify-end">
+            <RouterLink to="/registration">Регистрация</RouterLink>
+            <RouterLink to="/login">Войти</RouterLink>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-app-bar>
 
     <v-main>
@@ -23,10 +27,10 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-nav {
-  margin: 2rem auto;
-  display: flex;
-  justify-content: center;
+.header {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
 }
 a {
   text-decoration: none;
