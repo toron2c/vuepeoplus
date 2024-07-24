@@ -7,15 +7,7 @@
         </h1>
       </v-col>
       <v-col class="d-flex justify-center align-center" cols="12">
-        <v-img
-          src="/images/note.webp"
-          alt="Note Image"
-          class="centered-image"
-          lazy-src="/images/note-placeholder.webp"
-          aspect-ratio="2.5"
-          contain
-          transition="fade-transition"
-        ></v-img>
+        <img class="note" src="/images/note.webp" alt="Note Image" />
       </v-col>
     </v-row>
   </v-container>
@@ -41,6 +33,11 @@ import HomeComponent from '@components/HomeComponents/HomeComponent.vue'
 @media (max-width: 900px) {
   .note {
     max-width: 500px;
+  }
+}
+@media (max-width: 400px) {
+  .note {
+    max-width: 320px;
   }
 }
 </style>
