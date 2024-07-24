@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <v-app>
+  <v-app class="app">
     <v-app-bar app>
       <v-container class="header">
         <v-row class="justify-space-between w-100">
@@ -32,7 +32,8 @@ import { RouterLink, RouterView } from 'vue-router'
   padding: 0;
   max-width: 100%;
 }
-a {
+a,
+.logo {
   text-decoration: none;
   font-size: 1.6rem;
   color: #000;
